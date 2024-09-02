@@ -12,7 +12,19 @@ sources:
     tables:
       - name: customers
         freshness: null
+        # implement data test on source data for customers table
+        columns:
+          - name: id #note: use original column name from source table or test will fail
+            tests:
+              - unique 
+              - not_null 
         
       - name: orders
+      # implement data test on source data for orders table
+        columns:
+          - name: id #note: use original column name from source table or test will fail
+            tests:
+              - unique 
+              - not_null 
         
         
